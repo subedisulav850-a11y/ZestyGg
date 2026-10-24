@@ -44,7 +44,7 @@ except Exception:
 
 # ==================== CONFIG ====================
 WEB_HOST = "0.0.0.0"
-WEB_PORT = 20331
+WEB_PORT = int(os.environ.get("PORT", 20331))
 TOKEN_CACHE_FILE = "token_cache.json"
 DEVICES_FILE = "devices.json"
 TOKEN_CACHE_TTL = 1200
